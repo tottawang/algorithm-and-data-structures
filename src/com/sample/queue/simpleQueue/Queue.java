@@ -19,10 +19,6 @@ public class Queue {
     } else {
       this.rear.next = newNode;
       this.rear = newNode;
-
-      if (front.next == null) {
-        this.front.next = newNode;
-      }
     }
     size++;
   }
