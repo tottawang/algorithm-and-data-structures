@@ -34,4 +34,8 @@ public class HashCode {
     return hash;
   }
 
+  // to be implemented
+  // http://www.iteye.com/topic/709945
+
+
 }
