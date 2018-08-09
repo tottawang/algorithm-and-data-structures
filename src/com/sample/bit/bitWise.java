@@ -6,4 +6,13 @@ public class bitWise {
     return value > 0 && (value & (value - 1)) == 0;
   }
 
+  public static int countOnes(int value) {
+    int count = 0;
+    while (value != 0) {
+      value = value & (value - 1);
+      count++;
+    }
+    return count;
+  }
+
 }
