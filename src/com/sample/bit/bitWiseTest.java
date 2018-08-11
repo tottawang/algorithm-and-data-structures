@@ -12,6 +12,13 @@ public class bitWiseTest {
   }
 
   @Test
+  public void changeBitNumberWhenAtoB() {
+    // 1111 ^ 001 = 1110
+    // Count of 1 in 1110 -> 3
+    Assert.assertEquals(3, bitWise.countOnes(1 ^ 15));
+  }
+
+  @Test
   public void countOnesTest() {
     Assert.assertEquals(4, bitWise.countOnes(15));
   }
