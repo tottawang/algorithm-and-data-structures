@@ -9,7 +9,7 @@ public class SimpleBloomFilter {
   /**
    * not sure about the right ones, to be changed
    */
-  private static final int[] SEEDS = {123, 456, 789, 1234, 5678};
+  private static final int[] SEEDS = new int[] {7, 11, 13, 31, 37, 61,};
   private SimpleHash[] hashFunctions;
   private BitSet bits = new BitSet(DEFAULT_SIZE);
 
