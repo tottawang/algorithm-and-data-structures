@@ -11,7 +11,7 @@ public class SimpleBloomFilter {
    */
   private static final int[] SEEDS = new int[] {7, 11, 13, 31, 37, 61,};
   private SimpleHash[] hashFunctions;
-  private BitSet bits = new BitSet(DEFAULT_SIZE);
+  private BitSet bitSet = new BitSet(DEFAULT_SIZE);
 
   public SimpleBloomFilter() {
     hashFunctions = new SimpleHash[SEEDS.length];
@@ -45,14 +45,14 @@ public class SimpleBloomFilter {
 
   public void add(String value) {
     for (int i = 0; i < hashFunctions.length; i++) {
-      bits.set(hashFunctions[i].computeHash(value));
+      bitSet.set(hashFunctions[i].computeHash(value));
     }
   }
 
   public boolean contains(String value) {
     boolean result = true;
     for (int i = 0; i < hashFunctions.length; i++) {
-      result = result && bits.get(hashFunctions[i].computeHash(value));
+      result = result && bitSet.get(hashFunctions[i].computeHash(value));
     }
     return result;
   }
