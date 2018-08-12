@@ -1,5 +1,13 @@
 package com.sample.bit;
 
+/**
+ * References:
+ * </p>
+ * https://blog.csdn.net/lis_12/article/details/61628509
+ * </p>
+ * https://www.kancloud.cn/kancloud/data-structure-and-algorithm-notes/72993
+ *
+ */
 public class bitWise {
 
   public static boolean isPowerOfTow(int value) {
@@ -13,6 +21,23 @@ public class bitWise {
       count++;
     }
     return count;
+  }
+
+  /**
+   * Try to do it without arithmetic operator
+   */
+  public static int aPlusB(int num1, int num2) {
+
+    System.out.println(String.format("value1 %s value2 %s", Integer.toBinaryString(num1),
+        Integer.toBinaryString(num2)));
+
+    if (num2 == 0)
+      return num1;
+
+    int sum = num1 ^ num2;
+    int carry = (num1 & num2) << 1;
+
+    return aPlusB(sum, carry);
   }
 
   /**

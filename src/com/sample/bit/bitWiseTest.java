@@ -3,12 +3,23 @@ package com.sample.bit;
 import org.junit.Assert;
 import org.junit.Test;
 
+/**
+ * References:
+ * </p>
+ * https://zhuanlan.zhihu.com/p/26890617
+ *
+ */
 public class bitWiseTest {
 
   @Test
   public void isPowerOfTowTest() {
     Assert.assertFalse(bitWise.isPowerOfTow(7));
     Assert.assertTrue(bitWise.isPowerOfTow(8));
+  }
+
+  @Test
+  public void aPlusBTest() {
+    Assert.assertEquals(270, bitWise.aPlusB(15, 255));
   }
 
   @Test
