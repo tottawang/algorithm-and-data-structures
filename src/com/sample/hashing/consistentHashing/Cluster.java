@@ -4,8 +4,9 @@ import java.util.SortedMap;
 import java.util.TreeMap;
 
 public class Cluster {
-	
-	private SortedMap<String, String> server = new TreeMap<String, String>();
-	
+
+  private SortedMap<String, String> server = new TreeMap<String, String>();
+
+
 
 }
